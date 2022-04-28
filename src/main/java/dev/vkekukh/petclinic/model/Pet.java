@@ -34,4 +34,14 @@ public class Pet {
         this.birthDate = birthDate;
         return this;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Pet{");
+        sb.append("petType=").append(petType);
+        sb.append(", owner=").append(owner);
+        sb.append(", birthDate=").append(birthDate);
+        sb.append('}');
+        return sb.toString();
+    }
 }
