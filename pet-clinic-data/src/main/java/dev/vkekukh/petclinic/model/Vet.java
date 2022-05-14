@@ -1,5 +1,16 @@
 package dev.vkekukh.petclinic.model;
 
-public class Vet extends Person {
+import java.util.Set;
 
+public class Vet extends Person {
+    private Set<Specialty> specialties;
+
+    public Set<Specialty> getSpecialties() {
+        return specialties;
+    }
+
+    public Vet setSpecialties(Set<Specialty> specialties) {
+        this.specialties = specialties;
+        return this;
+    }
 }
