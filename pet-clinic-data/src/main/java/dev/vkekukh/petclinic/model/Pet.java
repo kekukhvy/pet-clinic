@@ -6,6 +6,7 @@ public class Pet extends BaseEntity {
 
     private PetType petType;
     private Owner owner;
+    private String name;
     private LocalDate birthDate;
 
     public PetType getPetType() {
@@ -43,5 +44,14 @@ public class Pet extends BaseEntity {
         sb.append(", birthDate=").append(birthDate);
         sb.append('}');
         return sb.toString();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Pet setName(String name) {
+        this.name = name;
+        return this;
     }
 }
