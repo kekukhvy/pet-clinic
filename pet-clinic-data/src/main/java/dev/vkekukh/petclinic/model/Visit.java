@@ -1,19 +1,28 @@
 package dev.vkekukh.petclinic.model;
 
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
-    private LocalDate localDate;
+    private LocalDate date;
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setDate(LocalDate localDate) {
+        this.date = localDate;
     }
 
     public String getDescription() {
@@ -31,5 +40,6 @@ public class Visit extends BaseEntity {
     public void setPet(Pet pet) {
         this.pet = pet;
     }
+
 
 }
