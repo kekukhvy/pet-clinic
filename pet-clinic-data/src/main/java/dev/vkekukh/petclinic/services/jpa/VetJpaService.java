@@ -1,4 +1,4 @@
-package dev.vkekukh.petclinic.services.map.jpa;
+package dev.vkekukh.petclinic.services.jpa;
 
 import dev.vkekukh.petclinic.model.Vet;
 import dev.vkekukh.petclinic.repositories.VetRepository;

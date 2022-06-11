@@ -1,4 +1,4 @@
-package dev.vkekukh.petclinic.services.map.jpa;
+package dev.vkekukh.petclinic.services.jpa;
 
 import dev.vkekukh.petclinic.model.Owner;
 import dev.vkekukh.petclinic.repositories.OwnerRepository;
