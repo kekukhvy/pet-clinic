@@ -1,31 +1,22 @@
 package dev.vkekukh.petclinic.model;
 
+import lombok.*;
+import lombok.experimental.SuperBuilder;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+@ToString
 public class Person extends BaseEntity {
 
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public Person setFirstName(String firstName) {
-        this.firstName = firstName;
-        return this;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Person setLastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
 }
